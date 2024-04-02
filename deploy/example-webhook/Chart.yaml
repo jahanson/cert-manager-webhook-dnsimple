@@ -1,0 +1,12 @@
+apiVersion: v1
+appVersion: "0.0.1"
+description: cert-manager webhook solver for ACME DNS01 challenge via DNSimple
+name: cert-manager-webhook-dnsimple
+version: 0.0.1
+home: https://github.com/jahanson/cert-manager-webhook-dnsimple
+sources:
+  - https://github.com/jahanson/cert-manager-webhook-dnsimple
+maintainers:
+  - name: Joseph Hanson
+    email: joe@veri.dev
+    url: https://hsn.dev

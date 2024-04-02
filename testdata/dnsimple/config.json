@@ -1,0 +1,6 @@
+{
+  "apiKeySecretRef": {
+    "name": "dnsimple-api-token",
+    "key": "api-token"
+  }
+}
