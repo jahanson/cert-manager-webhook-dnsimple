@@ -18,7 +18,7 @@ clusterIssuer:
   email: name@example.com
 
 image:
-  repository: ghcr.io/jahanson/cert-manager-webhook-dnsimple
+  repository: git.hsn.dev/jahanson/cert-manager-webhook-dnsimple
   tag: "0.0.1"
   pullPolicy: IfNotPresent
 
