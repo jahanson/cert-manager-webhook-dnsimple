@@ -1,8 +1,6 @@
 module github.com/cert-manager/webhook-example
 
-go 1.22.0
-
-toolchain go1.22.2
+go 1.22.2
 
 require (
 	github.com/cert-manager/cert-manager v1.14.4
