@@ -7,7 +7,7 @@ IMAGE_TAG := "latest"
 
 OUT := $(shell pwd)/_out
 
-KUBEBUILDER_VERSION=1.29.3
+KUBEBUILDER_VERSION=1.30.0
 
 HELM_FILES := $(shell find deploy/example-webhook)
 
