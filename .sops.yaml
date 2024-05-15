@@ -1,7 +1,7 @@
 ---
 creation_rules:
-  - path_regex: testdata/dnsimple/.*\.sops\.ya?ml
+  - path_regex: testdata/.*\.sops\.ya?ml
     encrypted_regex: "^(data|stringData)$"
     # Cert-Manager-Test
     age: >-
-      age10z089ltez8yuerju86k6aqd9vrmecm5gyn6gxmj68em0ztnyj46sd9840z
+      age18kj3xhlvgjeg2awwku3r8d95w360uysu0w5ejghnp4kh8qmtge5qwa2vjp
