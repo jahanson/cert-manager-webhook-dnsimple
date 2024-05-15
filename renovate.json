@@ -3,18 +3,6 @@
   "extends": [
     "config:recommended"
   ],
-  "packageRules": [
-    {
-      "matchDatasources": ["kubernetes"],
-      "matchPackagePatterns": ["k8s.io/client-go"],
-      "additionalFiles": [
-        {
-          "fileMatch": ["Makefile"],
-          "matchStrings": ["KUBEBUILDER_VERSION\\s*=\\s*\"?(?<currentValue>\\d+\\.\\d+\\.\\d+)\"?"]
-        }
-      ]
-    }
-  ],
   "regexManagers": [
     {
       "fileMatch": ["^Makefile$"],
