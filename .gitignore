@@ -21,3 +21,4 @@ _test
 # secrets
 *.key
 dnsimple-secret.yaml
+.decrypted~*
