@@ -26,6 +26,6 @@ jobs:
         env:
           API_TOKEN: ${{ secrets.API_TOKEN }}
       - name: Test
-        run: make test TEST_ZONE_NAME={{ secrets.TEST_ZONE_NAME }}
+        run: make test TEST_ZONE_NAME=${{ secrets.TEST_ZONE_NAME }}
       - name: Clean up
         run: rm -f testdata/dnsimple/dnsimple-secret.yaml
