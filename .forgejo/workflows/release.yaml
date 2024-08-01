@@ -18,6 +18,9 @@ jobs:
     container:
       image: ghcr.io/goreleaser/goreleaser:v2.1.0
     steps:
-      - run: |
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Run goreleaser
+        run: |
           echo ${{ github.workspace }}
           goreleaser release
