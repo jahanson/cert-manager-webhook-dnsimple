@@ -1,6 +1,23 @@
 ---
 # yaml-language-server: $schema=https://goreleaser.com/static/schema.json
+version: 2
+
 gitea_urls:
   api: https://git.hsn.dev/api/v1
   download: https://git.hsn.dev
   skip_tls_verify: false
+kos:
+  - id: cert-manager-webhook-dnsimple
+    platforms:
+      - linux/amd64
+      - linux/arm64
+    tags:
+      - latest
+      - "{{.Tag}}"
+    bare: true
+    flags:
+      - -trimpath
+    ldflags:
+      - -s -w
+      - -extldflags "-static"
+      - -X main.Version={{.Tag}}

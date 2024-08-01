@@ -31,6 +31,8 @@ jobs:
         env:
           GITHUB_TOKEN: ""
           GITEA_TOKEN: ${{ secrets.GITEA_TOKEN }}
+          KO_DOCKER_REPO: git.hsn.dev/${{ github.repository_owner }}/cert-manager-webhook-dnsimple
+
         run: |
           echo ${{ github.workspace }}
           goreleaser release
