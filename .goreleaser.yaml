@@ -1,0 +1,6 @@
+---
+# yaml-language-server: $schema=https://goreleaser.com/static/schema.json
+gitea_urls:
+  api: https://git.hsn.dev/api/v1
+  download: https://git.hsn.dev
+  skip_tls_verify: false
