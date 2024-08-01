@@ -13,7 +13,7 @@ builds:
       - linux
     goarch:
       - amd64
-      - arch64
+      - arm64
 
 kos:
   - repository: git.hsn.dev/jahanson/cert-manager-webhook-dnsimple
