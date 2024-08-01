@@ -21,13 +21,14 @@ jobs:
       - name: Checkout
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          REPO_URL: https://x-access-token:${GITHUB_TOKEN}@git.hsn.dev/${{ github.repository }}/src/tag/${GITHUB_REF_NAME}
+          REPO_URL: https://x-access-token:${GITHUB_TOKEN}@git.hsn.dev/${{ github.repository }}
         run: |
           printenv
           mkdir -p ${{ github.workspace }}
           echo "URL: ${{ env.REPO_URL }}"
           git clone ${{ env.REPO_URL }} ${{ github.workspace }}
           echo "Repository cloned!"
+          git checkout ${GITHUB_REF_NAME}
       - name: Run goreleaser
         env:
           GITHUB_TOKEN: ""
