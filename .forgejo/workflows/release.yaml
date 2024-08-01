@@ -31,7 +31,7 @@ jobs:
           git checkout ${GITHUB_REF_NAME}
       - name: Docker Login
         run: |
-          echo ${{ secrets.GITHUB_TOKEN }} | docker login -u x-access-token --password-stdin git.hsn.dev
+          echo ${{ secrets.ACTIONS_RUNTIME_TOKEN }} | docker login -u x-access-token --password-stdin git.hsn.dev
       - name: Run goreleaser
         env:
           GITHUB_TOKEN: ""
