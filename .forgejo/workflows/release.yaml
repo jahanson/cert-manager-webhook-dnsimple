@@ -23,6 +23,7 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           REPO_URL: https://x-access-token:${ GITHUB_TOKEN }@git.hsn.dev/${{ GITHUB_REPOSITORY }}
         run: |
+          printenv
           echo "URL: ${{ env.REPO_URL }}"
           git clone --depth 0 ${{ env.REPO_URL }} ${{ github.workspace }}
           echo "Repository cloned!"
