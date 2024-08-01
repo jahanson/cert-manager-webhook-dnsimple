@@ -7,7 +7,7 @@ gitea_urls:
   download: https://git.hsn.dev
   skip_tls_verify: false
 kos:
-  - id: cert-manager-webhook-dnsimple
+  - id: webhook
     platforms:
       - linux/amd64
       - linux/arm64
