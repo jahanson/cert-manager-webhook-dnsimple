@@ -29,6 +29,9 @@ jobs:
           git clone ${{ env.REPO_URL }} ${{ github.workspace }}
           echo "Repository cloned!"
           git checkout ${GITHUB_REF_NAME}
+      - name: Docker Login
+        run: |
+          echo ${{ secrets.GITHUB_TOKEN }} | docker login -u x-access-token --password-stdin git.hsn.dev
       - name: Run goreleaser
         env:
           GITHUB_TOKEN: ""
@@ -37,4 +40,4 @@ jobs:
 
         run: |
           echo ${{ github.workspace }}
-          goreleaser release
+          goreleaser release --clean
