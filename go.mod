@@ -1,4 +1,4 @@
-module github.com/cert-manager/webhook-example
+module git.hsn.dev/jahanson/cert-manager-webhook-dnsimple
 
 go 1.22.2
 
