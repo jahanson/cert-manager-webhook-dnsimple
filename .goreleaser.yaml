@@ -9,15 +9,27 @@ gitea_urls:
 builds:
   - env: ["CGO_ENABLED=0"]
     binary: webhook
+    goos:
+      - linux
+    goarch:
+      - amd64
+      - arch64
+
 kos:
-  - id: cert-manager-webhook-dnsimple
+  - repository: git.hsn.dev/jahanson/cert-manager-webhook-dnsimple
+    id: cert-manager-webhook-dnsimple
+    # Chainguard Static is the default base image.
+    # cgr.dev/chainguard/static
+    # base_image: alpine
+    bare: true
+    creation_time: "{{.CommitTimestamp}}"
+    ko_data_creation_time: "{{.CommitTimestamp}}"
     platforms:
       - linux/amd64
-      # - linux/arm64
+      - linux/arm64
     tags:
       - latest
       - "{{.Tag}}"
-    bare: true
     flags:
       - -trimpath
     ldflags:
