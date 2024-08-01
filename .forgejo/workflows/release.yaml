@@ -21,7 +21,7 @@ jobs:
       - name: Checkout
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          REPO_URL: https://x-access-token:${GITHUB_TOKEN}@git.hsn.dev/${{ github.repository }}:${{ github.ref }}
+          REPO_URL: https://x-access-token:${GITHUB_TOKEN}@git.hsn.dev/${{ github.repository }}:${{ env.GITHUB_REF_NAME }}
         run: |
           printenv
           mkdir -p ${{ github.workspace }}
