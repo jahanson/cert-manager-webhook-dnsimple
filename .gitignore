@@ -21,6 +21,9 @@ cert-manager-webhook-example
 _out
 _test
 
+# act
+.github
+
 # secrets
 *.key
 dnsimple-secret.yaml
