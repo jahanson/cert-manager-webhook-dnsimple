@@ -25,3 +25,4 @@ _test
 *.key
 dnsimple-secret.yaml
 .decrypted~*
+.op
