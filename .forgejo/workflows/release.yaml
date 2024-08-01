@@ -21,9 +21,8 @@ jobs:
       - name: Checkout
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          REPO_URL: https://x-access-token:${{ env.GITHUB_TOKEN }}@git.hsn.dev/${{ env.GITHUB_REPOSITORY }}
+          REPO_URL: https://x-access-token:${GITHUB_TOKEN}@git.hsn.dev/${{ github.repository }}
         run: |
-          printenv
           mkdir -p ${{ github.workspace }}
           echo "URL: ${{ env.REPO_URL }}"
           git clone --depth 0 ${{ env.REPO_URL }} ${{ github.workspace }}
