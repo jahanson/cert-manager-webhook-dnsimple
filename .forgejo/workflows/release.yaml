@@ -28,6 +28,9 @@ jobs:
           git clone --depth 1 ${{ env.REPO_URL }} ${{ github.workspace }}
           echo "Repository cloned!"
       - name: Run goreleaser
+        env:
+          GITHUB_TOKEN: ""
+          GITEA_TOKEN: ${{ secrets.GITEA_TOKEN }}
         run: |
           echo ${{ github.workspace }}
           goreleaser release
