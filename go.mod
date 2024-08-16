@@ -3,7 +3,7 @@ module git.hsn.dev/jahanson/cert-manager-webhook-dnsimple
 go 1.22.2
 
 require (
-	github.com/cert-manager/cert-manager v1.15.2
+	github.com/cert-manager/cert-manager v1.15.3
 	github.com/dnsimple/dnsimple-go v1.7.0
 	k8s.io/apiextensions-apiserver v0.30.3
 	k8s.io/apimachinery v0.30.3
