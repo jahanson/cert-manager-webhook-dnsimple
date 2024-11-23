@@ -15,7 +15,7 @@ jobs:
   goreleaser:
     runs-on: docker
     container:
-      image: ghcr.io/goreleaser/goreleaser:v2.4.4
+      image: ghcr.io/goreleaser/goreleaser:v2.4.8
     steps:
       - name: Checkout
         env:
